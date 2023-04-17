@@ -37,7 +37,7 @@ public class PersonServiceImp implements PersonService{
                 person.setCompany(updatedPerson.getCompany());
                 person.setPhone(updatedPerson.getPhone());
                 person.setSalary(updatedPerson.getSalary());
-                person.setJobType(updatedPerson.getJobType());
+                person.setWorkType(updatedPerson.getWorkType());
                 return personRepository.save(person);
                 }).orElseThrow(()-> new ResourceNotFoundException("Person not found with id: " + id));
     }

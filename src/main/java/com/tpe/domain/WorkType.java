@@ -1,6 +1,6 @@
 package com.tpe.domain;
 
-public enum JobType {
+public enum WorkType {
     REMOTE,
     ON_SITE,
     HYBRID

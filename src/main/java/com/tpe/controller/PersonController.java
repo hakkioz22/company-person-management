@@ -1,10 +1,9 @@
 package com.tpe.controller;
 
 import com.tpe.domain.Company;
-import com.tpe.domain.JobType;
+import com.tpe.domain.WorkType;
 import com.tpe.domain.Person;
 import com.tpe.domain.PersonDTO;
-import com.tpe.exception.ResourceNotFoundException;
 import com.tpe.service.CompanyService;
 import com.tpe.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,7 +44,7 @@ public class PersonController {
         person.setName(personDTO.getName());
         person.setPhone(personDTO.getPhone());
         person.setSalary(personDTO.getSalary());
-        person.setJobType(JobType.valueOf(personDTO.getJobType()));
+        person.setWorkType(WorkType.valueOf(personDTO.getJobType()));
 
         Company company = companyService.findCompanyById(personDTO.getCompanyId());
         person.setCompany(company);

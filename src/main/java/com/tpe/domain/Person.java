@@ -32,7 +32,7 @@ public class Person {
 
     @Column
     @Enumerated(EnumType.STRING)
-    private JobType jobType;
+    private WorkType workType;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnore
