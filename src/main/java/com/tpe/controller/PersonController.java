@@ -69,7 +69,7 @@ public class PersonController {
             personService.deletePerson(id);
             return new ResponseEntity<>("Person with id: " + id +" deleted succesfully",HttpStatus.OK);
         }
-        else {return new ResponseEntity<String>("Person not found with id: " + id,HttpStatus.BAD_REQUEST);}
+        else {return new ResponseEntity<String>("Person not found with id: " + id,HttpStatus.NOT_FOUND);}
 
 
     }
