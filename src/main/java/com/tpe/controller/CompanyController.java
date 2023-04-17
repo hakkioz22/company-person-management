@@ -31,18 +31,21 @@ public class CompanyController {
         return new ResponseEntity<>(company,HttpStatus.OK);
     }
 
+    //Create a new Company
     @PostMapping
     public ResponseEntity<Company> createCompany(@RequestBody Company company){
         companyService.saveCompany(company);
         return new ResponseEntity<>(company,HttpStatus.CREATED);
     }
 
+    //Update an existing company
     @PutMapping("/{id}")
     public ResponseEntity<Company> updateCompany(@PathVariable Long id,@RequestBody Company company){
         Company updatedCompany = companyService.updateCompany(id, company);
         return new ResponseEntity<>(updatedCompany,HttpStatus.OK);
     }
 
+    //Delete an existing company
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteCompany(@PathVariable Long id){
         companyService.deleteCompany(id);
